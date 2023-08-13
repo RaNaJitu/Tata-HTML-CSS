@@ -1,0 +1,330 @@
+* {
+    /* box-sizing: border-box */
+}
+
+body {
+    font-family: Verdana;
+    margin: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.main {
+    /* overflow-x: scroll; */
+}
+
+/* Slideshow container */
+/* .slideshow-container {
+            max-width: 100%;
+            height: 525px;
+            position: relative;
+            top: 0%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            background-size: cover;
+            background-position: center;
+            max-height: 90vh;
+
+        } */
+
+.slideshow-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* overflow: hidden; */
+    position: relative;
+    /* background-size: cover;
+    background-position: center; */
+    transition: all 0.6s linear;
+        min-height: 560px;
+}
+
+/* .slide-show {
+
+    width: 100%;
+    max-height: 100%;
+    transition: all 0.6s linear;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+} */
+.banner_images {
+    background-position: center center;
+    /* object-fit: contain; */
+    /* background-size: cover; */
+    position: relative;
+    transition: opacity 0s ease-in-out;
+    max-width: 100%;
+    max-height: auto;
+}
+.banner-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: flex-start;
+    position: absolute;
+    top: 10%;
+    left: 5%
+}
+
+.banner-logo {
+    display: flex;
+}
+
+.logo {
+    height: 40%;
+    /* width: 40%; */
+    translate: all 4s ease-in;
+}
+
+#text-wrapper {
+    margin-top: 5%;
+    color: white;
+    translate: all 0.6s ease;
+    font-size: 16px;
+}
+
+#text-wrapper .digit {
+    margin-left: 7px;
+    padding: 0px 7px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    max-width: 10px;
+    max-height: 15px;
+}
+
+.banner-desc {
+    width: 400px;
+    color: lightgray;
+    margin: 10px 0px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.banner-button {
+    border: none;
+    border-radius: 0.4vw;
+    cursor: pointer;
+    font-weight: 700;
+    margin-right: 1rem;
+    outline: none;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 100px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.dots-wrapper {
+    width: 100%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+
+    margin: 0 2px;
+    background-color: #bbb;
+}
+
+.active {
+    border: 2px solid white;
+    border-radius: 10px
+        /* transform: translateX(-100%); */
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.2s;
+    /* animation: fadeIn ease 3s; */
+    /* animation-name: fade;
+    animation-duration: 1.5s;
+    position: relative; Add this to enable left-to-right movement
+    left: -100%; Start the element outside the left boundary
+    opacity: 0; Set initial opacity to 0 for fade-in effect */
+    /* transition: opacity 5s ease-in-out; */
+}
+
+@keyframes fade {
+    from {
+        /* opacity: .4; */
+        /* transform: translate(-100%) */
+        /* left: -100%; Start from the left boundary */
+        /* transform: translateX(-100%); */
+        /* -webkit-transform: translateX(0%); */
+        transform: translateY(0%);
+        text-shadow: 1px 1px 2px black, 0 0 25px yellow, 0 0 5px white;
+    }
+
+    to {
+        /* opacity: 1; */
+        /* transform: translateX(0); */
+
+        transform: "translateY(50%)";
+        text-shadow: 1px 1px 2px black, 0 0 25px yellow, 0 0 5px white;
+            /* left: 0; Move to the original position */
+    }
+}
+
+
+
+
+/* Adding animation classes
+        .slide-left {
+            animation: slideToLeft 1s forwards;
+        }
+
+        .slide-right {
+            animation: slideToRight 1s forwards;
+        }
+
+        @keyframes slideToLeft {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes slideToRight {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0%);
+            }
+        } */
+
+.movie {
+    display: flex;
+    position: absolute;
+    top: 65%;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+
+
+.movie-list-container {
+    padding: 0 20px;
+}
+
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list {
+    display: flex;
+    align-items: center;
+    max-height: 130px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-title {
+    margin: 1% 1.2%;
+    color: white;
+}
+
+.movie-list-item {
+    margin: 0 0.3%;
+    position: relative;
+}
+
+/* .movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin: 0 30px;
+  opacity: 0.5;
+} */
+
+/* .movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+} */
+
+.movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 220px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.movie-list-item-title {
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-desc {
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button {
+    padding: 10px;
+    background-color: #4dbf00;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.arrow {
+    font-size: 60px;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
