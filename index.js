@@ -6,7 +6,7 @@ const slides = [
     thumbnailImage: "images/1.png",
     bannerImage: "images/banner1.png",
     logo: "images/logo1.png",
-    timeDurations: "1h 40m - Sci-Fi - ACTION - ADVENTURE - ",
+    timeDurations: "1h 40m • Sci-Fi • ACTION • ADVENTURE",
     banner__description:
       "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
   },
@@ -16,7 +16,7 @@ const slides = [
     thumbnailImage: "images/2.png",
     bannerImage: "images/banner2.png",
     logo: "images/logo2.png",
-    timeDurations: "1h 40m • Sci-Fi • ACTION • ADVENTURE 22222",
+    timeDurations: "1h 40m • Sci-Fi • ACTION • ADVENTURE",
     banner__description:
       "2222 team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
   },
