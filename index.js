@@ -121,15 +121,17 @@ function showSlides(n) {
   document.getElementById("desc").innerHTML = slides[n].banner__description;
 
   let banner = document.getElementById("slide-show");
+  banner.style.transition = "all 0.7s cubic-bezier(0.73, 0.01, 1, 1)";
   banner.style.transform = `translate(-${n * 100}%)`;
-  logo.style.transition = "all 0.6s ease";
+  logo.style.transition = "all 0.2s ease-in-out";
   logo.style.transform = "translateY(-150%)";
 
   // text.className += " fade";
-  text.style.transition = "all 0.6s ease";
-  text.style.transform = "translateY(30%)";
-  text.style.textShadow = "1px 1px 2px black, 0 0 25px yellow, 0 0 5px white";
-  button.style.boxShadow = "10px 30px 5px #e0e0e0 ";
+  text.style.transition = "all 0s ease";
+  text.style.transform = "translateY(20%)";
+  text.style.textShadow = "1px 12px 2px white";
+  button.style.boxShadow = "10px 30px 5px #e0e0e0";
+  button.style.textShadow = "10px 30px 5px black";
 
   for (i = 0; i < thumbnailList.length; i++) {
     thumbnailList[i].className = thumbnailList[i].className.replace(
@@ -139,20 +141,11 @@ function showSlides(n) {
   }
   thumbnailList[n].className += " active";
 
-  // // logo.style.transform = `translateY(-${slideIndex * 100}%)`;
-  // // slides[slideIndex - 1].style.transform = `translateX(-${slideIndex * 100}%)`;
-  // document.getElementById("banner").src = slides[n].bannerImage;
-  // logo.style.translate = "all 1s ease";
-  // // logo.style.transform = "translateY(-130%)";
-  // // classNameLogo.style.transform = "translateY(-130%)";
-  // logo.style.backgroundColor = "yellow";
-  // // logo.style.transform = "scale(1, 2, 2, 3,2, 1)";
-  // // text.style.translate = "all 3s ease-in-out";
-  // text.style.transform = "translateY(30%)";
   setTimeout(() => {
     (text.style.transform = "none"), (logo.style.transform = "none");
     text.style.textShadow = "none";
     button.style.boxShadow = "none";
+    button.style.textShadow = "none";
     // logo.style.transform = "scale(.7)";
-  }, 1000);
+  }, 400);
 }
